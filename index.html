@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>yourname</title>
+    <title>Dr Ryan Banks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -14,18 +14,28 @@
     <div id="loading">
         <div id="spinner"></div>
     </div>
-    <div id="magnify">
+    <!-- <div id="magnify">
         <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
         <div id="img_here"></div>
+    </div> -->
+    <div id="work-popup" onclick="closeWorkPopup()">
+        <div id="work-popup-content" onclick="event.stopPropagation()">
+            <span id="work-popup-close" onclick="closeWorkPopup()">&times;</span>
+            <img id="work-popup-image" src="" alt="">
+            <h2 id="work-popup-title"></h2>
+            <p id="work-popup-description"></p>
+            <div id="work-popup-buttons"></div>
+        </div>
     </div>
     <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
         <table>
             <tr>
-                <td id="logo">yourname.</td>
+                <td id="logo">Dr Ryan Banks</td>
                 <td id="navigation">
-                    <a href="#work">work</a>
                     <a href="#bio">about</a>
-                    <a href="">blog</a>
+                    <a href="#work">work</a>
+                    <a href="#work-experience">experience</a>
+                    <a href="#education">education</a>
                     <a href="#contact">contact</a>
                 </td>
             </tr>
@@ -34,8 +44,8 @@
     <table id="top_part">
         <tr>
             <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
-                <h1>this is where you put your about or tagline</h1>
-                <button class="btn_one">Hire Me</button><br>
+                <h1>Computer Vision and AI Engineer/Researcher</h1>
+                <!-- <button class="btn_one">Learn More</button><br> -->
                 <table>
                     <tr>
                         <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
@@ -49,26 +59,156 @@
             <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
         </tr>
     </table>
-    <div id="work">
-        <h1>work</h1>
-        <div id="photos">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1547922657-b370d1687eb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549375463-8cbc18ca3f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=650&q=80">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1549309019-a1d77aeae74f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1547149666-769b42053e67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1547950515-e652d0f50b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
-            <img onclick="magnify($(this).attr('src'))" src="https://images.unsplash.com/photo-1545342084-d03fe58ea023?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80">
-        </div>
-    </div>
     <div id="bio">
         <h1>about</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Dr Ryan Banks is a highly accomplished computer vision and AI Researcher with a strong background in developing innovative solutions for complex domain specific problems. With expertise in computer vision, machine learning, and deep learning, Dr Banks has contributed to cutting edge research and real world applications in medical imaging domains. His work focuses on leveraging and proposing novel AI technologies to enhance clinically significant medical image segmentation, object detection, and landmark detection tasks, making significant advancements in the field of medical AI.
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            With a background in computing for digital media from the University of Sussex, Dr Banks has strong foundations in computer science and digital media technologies. Subsequently, he attended the University of Surrey for his MSc and PhD, where he specialised in data seience and AI for medical imaging. During his PhD, Dr Banks developed novel deep learning methodologies for dental imaging diagnostic tasks. His research focused on utilising deep learning techniques to optimise and enhance existing clinical diagnostic processes, with additional focus on anatomy-aware and hierarchy-aware models.
         </p>
+        <p>
+            Dr Banks has a proven track record of successfully leading and collaborating on research projects, resulting in numerous datasets and publications in top conferences and journals. His experience working closely with esteemed researchers such as Professor H Lilian Tang, Dr. Tan Sui, Dr. Yunpeng Li and Dr. Xiongjie Chen, resulted in successful UKRI i4i funding of £1.6M, leading to the spin-out company, BeCertain.ai. With a passion for pushing the boundaries of computer vision that produce real world impact, Dr Banks is looking for the next research direction that will maximise societal benefit.
+        </p>
+    </div>
+
+    <div id="work">
+        <h1>work</h1>
+        <div id="photos">
+            <img data-title="Medical Image Segmentation" data-description="Developed a deep learning model for automatic segmentation of tumors in MRI scans using U-Net architecture." data-buttons='[{"text":"Code","url":"https://github.com/example/medical-segmentation"},{"text":"Paper","url":"https://arxiv.org/abs/example"}]' onclick="openPopup($(this))" src="https://images.unsplash.com/photo-1547922657-b370d1687eb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
+            <img data-title="Computer Vision for Autonomous Vehicles" data-description="Research on real-time object detection and lane tracking for self-driving car systems." data-buttons='[{"text":"Paper","url":"https://arxiv.org/abs/example2"},{"text":"GitHub","url":"https://github.com/example/cv-autonomous"}]' onclick="openPopup($(this))" src="https://images.unsplash.com/photo-1549375463-8cbc18ca3f24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80">
+            <img data-title="Deep Learning Image Classification" data-description="High-accuracy image classification model using convolutional neural networks for various domains." data-buttons='[{"text":"Code","url":"https://github.com/example/image-classification"},{"text":"Paper","url":"https://arxiv.org/abs/example3"}]' onclick="openPopup($(this))" src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=650&q=80">
+            <img data-title="AI Applications in Healthcare" data-description="Exploring various AI techniques for medical diagnosis, treatment planning, and patient monitoring." data-buttons='[{"text":"Blog","url":"https://medium.com/example/ai-healthcare"},{"text":"GitHub","url":"https://github.com/example/ai-healthcare"}]' onclick="openPopup($(this))" src="https://images.unsplash.com/photo-1549309019-a1d77aeae74f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+            <img data-title="Neural Networks for Vision Tasks" data-description="Custom neural network architectures optimized for computer vision tasks including detection and segmentation." data-buttons='[{"text":"Code","url":"https://github.com/example/nn-vision"}]' onclick="openPopup($(this))" src="https://images.unsplash.com/photo-1547149666-769b42053e67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80">
+            <img data-title="Advanced Image Processing Library" data-description="A comprehensive library for image preprocessing, augmentation, and feature extraction." data-buttons='[{"text":"GitHub","url":"https://github.com/example/image-processing"},{"text":"Docs","url":"https://example.com/docs"}]' onclick="openPopup($(this))" src="https://images.unsplash.com/photo-1547950515-e652d0f50b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+            <img data-title="Research on Computer Vision" data-description="Published research paper on novel approaches to computer vision problems in medical imaging." data-buttons='[{"text":"PDF","url":"https://example.com/paper.pdf"},{"text":"ArXiv","url":"https://arxiv.org/abs/example4"}]' onclick="openPopup($(this))" src="https://images.unsplash.com/photo-1545342084-d03fe58ea023?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80">
+        </div>
+    </div>
+    
+    <div id="work-experience">
+        <h1>work experience</h1>
+        <div class="horizontal-scroll">
+            <div class="scroll-item">
+                <h3>Research Collaboration Lead</h3>
+                <h4>University of Surrey | 2023 - Present</h4>
+                <p>Led multiple global multidisciplinary research teams on various research papers. Engineered novel deep learning solutions for medical imaging problems. Decided research direction, technical direction and clinical significance. Managed and developed data collection/annotation protocols and methods</p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">Software/AI Engineering</span>
+                    <span class="keyword-tag">Medical Imaging AI</span>
+                    <span class="keyword-tag">AI</span>
+                    <span class="keyword-tag">Research</span>
+                    <span class="keyword-tag">Project Management/Leadership</span>
+                    <span class="keyword-tag">Data Collection</span>
+                    <span class="keyword-tag">Data Annotation</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <h3>Assistant Research Supervisor</h3>
+                <h4>University of Surrey | Jan 2022 - Jan 2024</h4>
+                <p>Supervised two undergraduate interns in the development of a cloud-based project info website with CMS. Supervised a final year undergraduate in the development of a cloud image collection and annotation web app prototype. Supervised a final year undergraduate in the optimisation of a cloud-based object detection model for active learning integration. </p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">Supervision</span>
+                    <span class="keyword-tag">Project Management/Leadership</span>
+                    <span class="keyword-tag">Web Applications</span>
+                    <span class="keyword-tag">Data Annotation</span>
+                    <span class="keyword-tag">Cloud Computing</span>
+                    <span class="keyword-tag">Active Learning</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <h3>Deep Learning Engineer and PPIE Assistant Lead </h3>
+                <h4>BeCertain.ai (Pre-Startup) | Jan 2022 - Jan 2024</h4>
+                <p>Developed and deployed object detection models for radiographic dental disease detection tasks. Organised and led monthly Patient and Public Involvement and Engagement (PPIE) meetings, encouraging debate between representatives and addressing representatives' concerns on the project, data collection/handling, and models used.</p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">Software/AI Engineering</span>
+                    <span class="keyword-tag">Object Detection</span>
+                    <span class="keyword-tag">Medical Imaging AI</span>
+                    <span class="keyword-tag">Web Applications</span>
+                    <span class="keyword-tag">Model Deployment</span>
+                    <span class="keyword-tag">PPIE</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <h3>Research Assistant</h3>
+                <h4>University of Surrey | Dec 2021 - Jan 2022</h4>
+                <p>Developed and ran a successful Zooniverse.org data annotation project with 80,000+ completed annotations by 2000+ volunteers. Conducted PPIE with the general public. Processed, cleaned, and analysed medical imaging data/annotations. Trained experimental baseline models.</p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">Software/AI Engineering</span>
+                    <span class="keyword-tag">Data Collection</span>
+                    <span class="keyword-tag">Data Annotation</span>
+                    <span class="keyword-tag">PPIE</span>
+                    <span class="keyword-tag">Data Processing</span>
+                    <span class="keyword-tag">Data Analysis</span>
+                    <span class="keyword-tag">Project Management</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <h3>Various Summer Jobs and Experience in Hospitality and Web Development</h3>
+                <h4>Dec 2015 - Jan 2021</h4>
+                <p> Two week experience shadowing web development teams. Worked in high stress customer facing hospitality environments. Learned to sling delicious cocktails.</p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">Web Development</span>
+                    <span class="keyword-tag">Hospitality</span>
+                    <span class="keyword-tag">Customer Service</span>
+                    <span class="keyword-tag">Teamwork</span>
+                    <span class="keyword-tag">Mixology</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="education">
+        <h1>education</h1>
+        <div class="horizontal-scroll">
+            <div class="scroll-item">
+                <h3>PhD in Computer Science</h3>
+                <h4>University of Surrey | 2022 - 2026</h4>
+                <p>Developed clinician focused AI for dental imaging tasks. Thesis on "Structure-Aware Deep Learning Approaches for Dental Disease Detection in Diagnostic Imaging". Output of 3 published datasets (Segmentation, Object Detection, Landmark Detection), 3 first authored papers, and 2 co-authored papers. Played a pivotal role in securing £1.6M NIHR i4i research grant for the spin-out BeCertain.ai. Trained and deployed disease detection models for human in the loop data annotation platform. Collected numerous non-published datasets. </p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">AI Engineering</span>
+                    <span class="keyword-tag">ML Engineering</span>
+                    <span class="keyword-tag">Data Processing</span>
+                    <span class="keyword-tag">Data Collection</span>
+                    <span class="keyword-tag">Data Analysis</span>
+                    <span class="keyword-tag">Software Development</span>
+                    <span class="keyword-tag">Project Management/Leadership</span>
+                    <span class="keyword-tag">Computer Vision</span>
+                    <span class="keyword-tag">Medical Imaging AI</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <h3>MSc in Data Science</h3>
+                <h4>University of Surrey | 2020 - 2021</h4>
+                <p>Learned advanced techniques in data analysis, data processing, machine learning, and statistical modeling. Dissertation on Dental Disease Detection by Image Classification of Radiographs.</p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">Machine Learning and Data Mining</span>
+                    <span class="keyword-tag">Cloud Computing</span>
+                    <span class="keyword-tag">Model Deployment</span>
+                    <span class="keyword-tag">Database Systems</span>
+                    <span class="keyword-tag">Natural Language Processing</span>
+                    <span class="keyword-tag">Chat Bots and Text Classification</span>
+                    <span class="keyword-tag">Data Analysis and Visualization</span>
+                    <span class="keyword-tag">AI Programming</span>
+                    <span class="keyword-tag">Logic Models</span>
+                    <span class="keyword-tag">Computational Intelligence</span>
+                    <span class="keyword-tag">Genetic Algorithms</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <h3>BSc in Computing for Digital Media</h3>
+                <h4>University of Sussex | 2016 - 2019</h4>
+                <p>Learned fundamental skills in software engineering, computer science, and computational digital media.</p>
+                <div class="keyword-tags">
+                    <span class="keyword-tag">Software Engineering</span>
+                    <span class="keyword-tag">Databases</span>
+                    <span class="keyword-tag">Datastructures and Algorithms</span>
+                    <span class="keyword-tag">3D Modeling and Animation</span>
+                    <span class="keyword-tag">Programming for 3D</span>
+                    <span class="keyword-tag">3D Model Deployment and Web Applications</span>
+                    <span class="keyword-tag">Live Video Production</span>
+                    <span class="keyword-tag">Video Production and VFX</span>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="contact">
         <h1>contact</h1>
@@ -77,21 +217,22 @@
                     <td>
                         <div id="inner_div">
                             <table id="inner_table">
-                                <tr>
+                                <!-- <tr>
                                     <td><i class="fas fa-phone"></i> &nbsp; +1 234 567 8910</td>
-                                </tr>
+                                </tr> -->
                                 <tr>
-                                    <td><i class="fas fa-at"></i> &nbsp; yourname@email.com</td>
+                                    <td><i class="fas fa-at"></i> &nbsp; ryanbankspro@gmail.com</td>
                                 </tr>
-                                 <tr>
+                                 <!-- <tr>
                                     <td><i class="fas fa-fax"></i> &nbsp; +1 234 567 8910</td>
-                                </tr>
+                                </tr> -->
                                 <tr>
                                     <td><i class="fas fa-map-marker-alt"></i>
                                     <div id="address">
-                                        Street 123,<br>
-                                        blah blah city,<br>
-                                        blah blah country
+                                        <!-- Street 123,<br> -->
+                                        Guildford,<br>
+                                        Surrey,<br>
+                                        United Kingdom
                                     </div>
                                     </td>
                                 </tr>

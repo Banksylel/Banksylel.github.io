@@ -23,7 +23,7 @@ body {
     animation: rotate 0.56s infinite linear;
     width:50px;
     height:50px;
-    border:12px solid rgb(255, 44, 90);
+    border:12px solid rgb(0,66,37);
     border-bottom:12px solid #fff;
     border-radius:50%;
     margin:0;
@@ -51,44 +51,90 @@ header table {
 #navigation {
     width:80%;
 }
-#magnify {
-    width:100vw;
-    height:100vh;
-    background:rgba(0, 0, 0, 0.92);
-    position:fixed;
-    z-index:4;
-    display:none;
-    flex-direction: column;
-    justify-content:center;
+#work-popup {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
 }
-#magnify h1 {
-    position:absolute;
-    top:0;
-    right:0;
-    margin:20px 40px;
-    color:#fff;
-    transition:0.4s ease-in-out;
+
+#work-popup-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    position: relative;
 }
-#magnify h1:hover{
-    color:rgb(255, 44, 90);
-    cursor:pointer;
+
+#work-popup-close {
+    color: #aaa;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    float: none;
+    z-index: 6;
 }
-#img_here {
-    width:90%;
-    height:90%;
-    background-size:contain !important;
-    background-repeat:no-repeat !important;
-    margin:0px auto;
+
+#work-popup-close:hover,
+#work-popup-close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#work-popup-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#work-popup-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(0,66,37);
+}
+
+#work-popup-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#work-popup-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#work-popup-buttons .btn_one {
+    margin: 0;
+    padding: 8px 20px;
+    font-size: 14px;
 }
 #logo {
     font-size:24px;
-    color:rgb(255, 44, 90);
+    color:rgb(0,66,37);
 }
 #navigation {
     text-align:right;
 }
 #navigation a {
-    color:inherit;
+    color:rgb(0,66,37);
     text-decoration:none;
     padding:5px 10px;
     border-bottom:2px solid transparent;
@@ -101,6 +147,7 @@ header table {
 #top_part {
     width:100%;
     border:2vh solid #fff;
+    padding-top: 12vh;
 }
 #top_part tr td{
     width:50%;
@@ -127,7 +174,7 @@ header table {
     text-align:left;
 }
 .social {
-    color:rgb(255, 44, 90);
+    color:rgb(0,66,37);
     font-size:23px;
     padding:12px 17px;
     border-radius:50%;
@@ -139,15 +186,15 @@ header table {
 .social:hover { 
     cursor: pointer;
     color:#fff;
-    background:rgb(255, 44, 90);
-    box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
+    background:rgb(0,66,37);
+    box-shadow:0px 10px 30px rgba(0,66,37,0.8);
 }
 .btn_one {
     font-size:18px;
     font-family: 'Poppins', sans-serif;
-    color:rgb(255, 44, 90);
+    color:rgb(0,66,37);
     background:#fff;
-    border:3px solid rgb(255, 44, 90);
+    border:3px solid rgb(0,66,37);
     padding:8px 40px;
     width:35%;
     border-radius:80px;
@@ -156,15 +203,15 @@ header table {
     transition:0.4s ease-in-out;
 }
 .btn_one:hover {
-    box-shadow:0px 10px 30px rgba(255, 44, 90, 0.8);
+    box-shadow:0px 10px 30px rgba(0,66,37, 0.8);
     cursor:pointer;
     color:#fff;
-    background:rgb(255, 44, 90);
+    background:rgb(0,66,37);
 }
 #rightImage {
     width:100%;
     height:95vh;
-    background:linear-gradient(0deg,rgba(255, 44, 90, 0.8),rgba(255, 44, 90, 0.8)),url("https://images.unsplash.com/photo-1506057527569-6a0285b2fcc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=60") center center;
+    background:linear-gradient(0deg,rgba(0,66,37, 0.8),rgba(0,66,37, 0.8)),url("https://images.unsplash.com/photo-1506057527569-6a0285b2fcc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=60") center center;
     background-size:cover;
     background-repeat:no-repeat;
 }
@@ -175,7 +222,7 @@ header table {
 }
 #work h1 {
     padding:5px 0px;
-    border-bottom:4px solid rgb(255, 44, 90);
+    border-bottom:4px solid rgb(0,66,37);
     width:6%;
 }
 #photos {
@@ -202,7 +249,7 @@ header table {
 }
 #bio h1 {
     padding:5px 0px;
-    border-bottom:4px solid rgb(255, 44, 90);
+    border-bottom:4px solid rgb(0,66,37);
     width:8%;
 }
 #contact {
@@ -211,7 +258,7 @@ header table {
 }
 #contact h1 {
     padding:5px 0px;
-    border-bottom:4px solid rgb(255, 44, 90);
+    border-bottom:4px solid rgb(0,66,37);
     width:10%;
 }
 #contact table {
@@ -237,7 +284,7 @@ header table {
     margin:20px 1%;
     background:transparent;
     border:0px;
-    border-bottom:3px solid rgba(255, 44, 90,0.5);
+    border-bottom:3px solid rgba(0,66,37,0.5);
     padding:8px 10px;
     font-family: 'Poppins', sans-serif;
     font-size:18px;
@@ -250,7 +297,7 @@ header table {
     margin:20px 1%;
     padding:8px 10px;
     border:0px;
-    border-bottom:3px solid rgba(255, 44, 90,0.5);
+    border-bottom:3px solid rgba(0,66,37,0.5);
     padding:8px 10px;
     font-family: 'Poppins', sans-serif;
     font-size:18px;
@@ -262,11 +309,11 @@ header table {
 }
 #contact form input:focus {
     outline:none;
-    border-bottom:3px solid rgba(255, 44, 90,1);
+    border-bottom:3px solid rgba(0,66,37,1);
 }
 #contact form textarea:focus {
     outline:none;
-    border-bottom:3px solid rgba(255, 44, 90,1);
+    border-bottom:3px solid rgba(0,66,37,1);
 }
 #address {
     position:relative;
@@ -280,7 +327,7 @@ header table {
     font-weight:bold;
 }
 #footer a {
-    color:rgb(255, 44, 90);
+    color:rgb(0,66,37);
     text-decoration:none;
 }
 ::placeholder {
@@ -303,6 +350,104 @@ button:focus {
     background: rgba(0, 0, 0,0.8); 
 }
 
+#work-experience, #education {
+    width:92vw;
+    padding:6vh 4vw;
+    font-weight:bold;
+}
+#work-experience h1, #education h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(0,66,37);
+    width:25%;
+    margin-bottom: 30px;
+}
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 25px 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0,66,37) #f1f1f1;
+    scroll-behavior: smooth;
+}
+.horizontal-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: rgb(0,66,37);
+    border-radius: 5px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,66,37, 0.8);
+}
+.scroll-item {
+    flex: 0 0 320px;
+    min-height: 200px;
+    background: #fff;
+    border: 2px solid rgba(0,66,37, 0.1);
+    border-left: 5px solid rgb(0,66,37);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.scroll-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgb(0,66,37);
+}
+.scroll-item h3 {
+    color: rgb(0,66,37);
+    margin-bottom: 0.25px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.scroll-item h4 {
+    color: rgb(1, 19, 11);
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.scroll-item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 13px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.keyword-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+.keyword-tag {
+    background: rgba(0,66,37, 0.1);
+    color: rgb(0,66,37);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(0,66,37, 0.2);
+    transition: all 0.3s ease;
+}
+.keyword-tag:hover {
+    background: rgb(0,66,37);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
 @media (max-width: 1000px){
     #photos {
     columns:1;
@@ -320,6 +465,7 @@ button:focus {
     }
     #top_part {
         border:0px;
+        margin-top: 15vh;
     }
     #top_part tr td{
         width:100%;
@@ -327,10 +473,10 @@ button:focus {
     }
     #about {
         width:92% !important;
-        height:75vh;
-        padding-top:20vh !important;
+        height:auto;
         text-align:center;
-        padding:0px 4%;
+        padding:4vh 4%;
+        margin-bottom: 4vh;
     }
     #about table {
         width:100%;
@@ -339,16 +485,19 @@ button:focus {
     #about table tr td {
         text-align:center;
     }
+    #work {
+        margin-top: 10vh;
+    }
     .btn_one {
     padding:6px 30px;
     width:60%;
     margin:4vh auto;
-    box-shadow:0px 10px 20px rgba(255, 44, 90, 0.8);
-    background:rgb(255, 44, 90);
+    box-shadow:0px 10px 20px rgba(0,66,37, 0.8);
+    background:rgb(0,66,37);
     color:#fff;
     }
     .btn_one:hover {
-        box-shadow:0px 10px 40px rgba(255, 44, 90, 0.8);
+        box-shadow:0px 10px 40px rgba(0,66,37, 0.8);
         cursor:pointer;
     }
     #contact table tr td {
@@ -364,20 +513,17 @@ button:focus {
     #contact form textarea {
         width:90%;
     }
-    #work h1 {
-        width:19%;
-    }
-    #bio h1 {
+    #work-experience h1, #education h1 {
         width:25%;
-    }
-    #contact h1 {
-        width:33%;
     }
     header {
         width:96vw;
         background:#fff;
         padding:4vh 2vw;
         position:absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
     }
     #header table tr td {
         width:100%;
